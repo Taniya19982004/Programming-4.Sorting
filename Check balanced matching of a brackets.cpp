@@ -15,7 +15,7 @@ string isBalanced(string s)
             char top = st.top();
             st.pop();
             if(symbols[top]+symbols[bracket]!=0)
-            return "NO";
+            return "No";
         }
     }
     if(st.empty()) return "yes";
