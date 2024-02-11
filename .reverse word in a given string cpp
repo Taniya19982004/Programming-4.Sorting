@@ -1,0 +1,25 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){ 
+    
+string s="taniya.is.a.great";
+int start=0;
+    reverse(s.begin(), s.end());
+    int found =-1;
+    int previous = 0;
+    while(true){
+         previous = found;
+        found = s.find('.',found+1);
+        reverse (s.begin()+start,s.begin()+found);
+        start=found+1;
+        if(found==string::npos)
+        break;
+    }
+    reverse(s.begin()+ previous + 1 ,s.end());
+cout<<s<<"\n";
+   
+    return 0;
+
+}
